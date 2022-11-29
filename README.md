@@ -37,16 +37,19 @@ In the house price prediction example, the conditional probability of house pric
 ![Drift Comparison](./resources/4.png)
 
 Data Drift - The input data has changed. The distribution of the variables is meaningfully different.
+
 Concept Drift - Distributions might remain the same. Instead, the relationships between the model inputs and outputs change.
 
 ### Maximum Mean Discrepancy (MMD)
 
 The [Maximum Mean Discrepancy (MMD)](http://jmlr.csail.mit.edu/papers/v13/gretton12a.html) detector is a kernel-based method for multivariate 2 sample testing. The MMD is a distance-based measure between 2 distributions _p_ and _q_ based on the mean embeddings in a reproducing kernel Hilbert space :
+
 ![mmd](./resources/5.png)
 
 Maximum mean discrepancy (MMD) is a statistical test used to determine whether given two distribution are the same. Or in simpler terms MMD is a distance (difference) between feature means. MMD is very commonly used in GANs to check how good of images that GAN produces with respect to the input dataset that it was trained on. (Refer this [link)](https://www.onurtunali.com/ml/2019/03/08/maximum-mean-discrepancy-in-machine-learning.html)
 
 For MMD as loss function, refer to this [link](https://github.com/ZongxianLee/MMD_Loss.Pytorch/blob/master/mmd_loss.py)
+
 For more info on MMD, refer to this [link](https://github.com/TorchDrift/TorchDrift/blob/master/notebooks/note_on_mmd.ipynb)
 
 ### Drift Detection Results
@@ -131,6 +134,6 @@ Then, I trained the CNN model with both augmentations (random brightness/contras
   'backend': 'pytorch'}}
 ```
 
-Here are some training image samples used for training
+Here are some image samples used for training. ([Tensorboard Link](https://tensorboard.dev/experiment/WfxlPUd1RQigOy2WpvrBww/#scalars))
+
 ![](./resources/6.png)
-[Tensorboard Link](https://tensorboard.dev/experiment/WfxlPUd1RQigOy2WpvrBww/#scalars)
